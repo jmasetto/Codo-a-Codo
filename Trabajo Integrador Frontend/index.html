@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Trabajo Integrador Frontend</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Estilos.css">
+
+</head>
+<body >
+
+  <!-- Nota:
+    Organizacion luego gestion
+    
+    1- Maquetar la pagina, (Figma) siempre trabajar Mobile first a Desktop, 
+      una buena practica es colocar cada seccion del html, encapsular en un container, esto nos da flexibilidad con margenes etc
+    2- Definir componentes a utilizar, tamaños relativos , colores, formatos
+    2.1 header con menu Navbar, 
+    2.2 Utilizar card overlays para la parte de arriba
+    2.3 Card group, badge
+    2.4 Card horizontal para imagen y texto de costado, o ver si trabjo con row col
+    2.5 Formulario
+    2.6 footer con row column -->
+  
+
+
+   
+<!--  Seccion navbar -->
+<header>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
+      <div class="container-fluid mx-5">
+        <a class="navbar-brand" href="#">          
+             <img src="img/codoacodo.png" alt="Logo Codo a Codo" width="20%" height="20%">Conf Bs As</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        
+
+       <div class="collapse navbar-collapse   justify-content-end " id="navbarSupportedContent">
+        
+        <!-- Nota: una alternativa para poner los items alineados a la derecha es
+         <ul class="navbar-nav mr-auto">: esto es por defecto, entonces  cambiar mr-auto por ml-auto lo manda para la derecha
+        
+        -->  
+
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active" aria-current="page" href="#">La confencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#oradores">Los oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">El lugar y la fecha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conviérte en orador</a>
+            </li>
+            <li class="nav-item  ">
+              <a class="nav-link text-success " href="#">Comprar ticket</a>
+            </li>
+          </ul>         
+        </div>
+      </div>
+    </nav>   
+</header>
+
+<main>
+<!-- Seccion card overlays debo tratar el desborde--> 
+
+
+
+<!--
+
+<div class="card  text-bg-dark text-end rounded-0 position-relative  ">
+  <img src="img/ba1.jpg" class="card-img opacity-50" alt="Imagen BS1">
+ <div class="container position-absolute bottom-0 end-0 mb-5 me-5 ">
+  <div class="row">
+    <div class="col ">        
+    <h3 class="card-title">Conf Bs As</h3>
+    <p class="card-text ">Bs As llega por primera vez a Argentina. un evento para compartir con nuestra comunidad el conocimiento y experiencia
+      de los expertos que estan creando el futuro de internet. Ven a conocer  a miembros del evento, a otros estudiantes de Codo a Codo y los oradores 
+      de primer nivel que tenemos para ti. Te esperamos!
+    </p>        
+    <button type="button" class="btn text-white border">Quiero ser orador</button>
+    <button type="button" class="btn btn-success">Comprar tickets</button>
+  </div>
+</div>
+</div>
+  
+</div> 
+
+-->
+
+
+<!--
+Nota     En el caso, poco frecuente, de que en una hoja de estilo deba referenciar URLs o vínculos a otros archivos, 
+casi siempre se trata de gráficos que se vinculan como fondo a un elemento. En ese caso hay que tener en cuenta una particularidad:
+
+En CSS las URLs siempre se definen con referencia a la hoja de estilo, no al documento vinculado a ella.
+
+La estructura de directorio propio podría ser, por ejemplo:
+
+Archivo.html
+imagenes/imagen.gif
+css/sus-hojas-de-estilo.css
+
+Por lo tanto, si quiere integrar una imagen de fondo en su página, en el archivo CSS aparecerá, por ejemplo:
+
+body {
+background-image: url (../imágenes/imagen.gif);
+/* otras declaraciones */
+}-->
+
+
+<!--     Dark variant   opacity-75  d-dm-block oculto para dispositivos medios -->
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item bg-dark active">       
+        <img src="img/ba1.jpg" id="img1" class="card-img " alt="Imagen BS1">  
+          <div class="posicion">
+              <div class="carousel-caption  d-none d-md-block "> <!--end-0 bottom-0 me-5-->                
+                  <h3>Conf Bs As</h3>
+                  <p>Bs As llega por primera vez a Argentina. un evento para compartir con nuestra comunidad el conocimiento y experiencia
+                    de los expertos que estan creando el futuro de internet. Ven a conocer  a miembros del evento, a otros estudiantes de Codo a Codo y los oradores 
+                    de primer nivel que tenemos para ti. Te esperamos!
+                  </p>  
+                  <div class=" gap-2 d-md-block d-grid">
+                      <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
+                      <button type="button" class="btn btn-success Btn-Verde">Comprar tickets</button>
+                  </div> 
+              </div>
+          </div>
+       
+      </div>
+
+      <div class="carousel-item  bg-dark">
+        <img src="img/ba2.jpg" id="img2" class="card-img " alt="Imagen BS2"> 
+          <div class="posicion">
+              <div class="carousel-caption d-none d-md-block "> 
+                  <h3>Conf Bs As</h3>
+                  <p>Bs As llega por primera vez a Argentina. un evento para compartir con nuestra comunidad el conocimiento y experiencia
+                    de los expertos que estan creando el futuro de internet. Ven a conocer  a miembros del evento, a otros estudiantes de Codo a Codo y los oradores 
+                    de primer nivel que tenemos para ti. Te esperamos!
+                  </p>  
+                  <div class="d-grid gap-2 d-md-block">
+                      <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
+                      <button type="button" class="btn btn-success Btn-Verde">Comprar tickets</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="carousel-item   bg-dark">
+        <img src="img/ba3.jpg" id="img3" class="card-img " alt="Imagen BS3"> 
+          <div class="posicion">
+              <div class="carousel-caption d-none d-md-block ">
+                  <h3>Conf Bs As</h3>
+                  <p>Bs As llega por primera vez a Argentina. un evento para compartir con nuestra comunidad el conocimiento y experiencia
+                    de los expertos que estan creando el futuro de internet. Ven a conocer  a miembros del evento, a otros estudiantes de Codo a Codo y los oradores 
+                    de primer nivel que tenemos para ti. Te esperamos!
+                  </p>  
+                  <div class="d-grid gap-2 d-md-block">
+                      <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
+                      <button type="button" class="btn btn-success Btn-Verde">Comprar tickets</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+    
+
+<!--  seccion para la informacion de los oradores   utilizo card-group -->
+<section class="mx-5">
+  <div id="oradores" class="text-center m-3">
+    <h6 class="m-0">CONOCE A LOS </h6>
+    <h1>Oradores</h1>
+  </div>
+ 
+
+  
+ <div class="row row-cols-1 row-cols-md-3 g-3">
+  <div class="col">
+      <div class="card h-100">
+          <img src="img/steve.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+              <span class="badge bg-warning text-dark">JavaScript</span>
+              <span class="badge bg-info text-light">React</span>
+              <h5 class="card-title">Steve Jobs</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                  voluptatibus
+                  perferendis deleniti, totam fuga sequi iste! Facilis explicabo repellat ut similique
+                  incidunt?
+                  Ullam nobis beatae, corporis facilis veniam magni ratione!</p>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card h-100">
+          <img src="img/bill.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+              <span class="badge bg-warning text-dark">JavaScript</span>
+              <span class="badge bg-info text-light">React</span>
+              <h5 class="card-title">Bill Gates</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                  voluptatibus
+                  perferendis deleniti, totam fuga sequi iste! Facilis explicabo repellat ut similique
+                  incidunt?
+                  Ullam nobis beatae, corporis facilis veniam magni ratione!</p>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card h-100">
+          <img src="img/ada.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+              <span class="badge bg-secondary">Negocios</span>
+              <span class="badge bg-danger">Startups</span>
+              <h5 class="card-title">Ada Lovelace</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+                  voluptatibus
+                  perferendis deleniti, totam fuga sequi iste! Facilis explicabo repellat ut similique
+                  incidunt?
+                  Ullam nobis beatae, corporis facilis veniam magni ratione!</p>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<div class="card mb-3 text-light mt-4" style="max-width: 100%;">
+  <div class="row g-0">
+      <div class="col-md-6 d-flex border">
+         
+        
+        <!-- aqui el carrusel             -->
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner ">
+                  <div class="carousel-item  active">
+                      <img src="img/honolulu.jpg" class="d-block w-100 " alt="...">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/hawaii.jpg" class="d-block w-100 " alt="...">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/hawaii2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/hawaii3.jpg" class="d-block w-100" alt="...">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Texto a la derecha carrusel            -->
+
+      <div class="col-md-6 d-flex border">
+          <div class="card-body bg-dark">
+              <h3 class="card-title">Bs As - Octubre</h3>
+              <p class="card-text">Buenos Aires es la provincia y localidad más grande del estado de
+                  Argentina, en los Estados Unidos. Honululu es la más sureña de entre las principales
+                  ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa
+                  sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una
+                  ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km <sup>2</sup> de superficie).
+              </p>
+              <button type="button" class="btn btn-outline-light">Conoce más</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- seccion para el Form -->
+<div class="container w-50 pt-2">  
+  <div class="text-center">
+      <p class="text-secondary m-0"><sup>CONVIÉRTETE EN UN</sup> <h2>ORADOR</h2>
+      </p>
+      <p class="text-secondary m-1">Anótate como orador para dar una <a href="#!" class="text-secondary"
+              style="text-decoration-style: dotted;">charla ignite</a>. Cuéntanos de qué quieres hablar!</p>
+  </div>
+ 
+  <form class="row g-1 gx-5">
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" placeholder="Nombre">
+      </div>
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" placeholder="Apellido">
+      </div>
+      <div class="mb-3">
+          <textarea class="form-control fs-4" rows="3" placeholder="Sobre qué quieres hablar?"></textarea>
+          <p class="text-secondary"><sub>Recuerda incluir un título para tu charla</sub></p>
+      </div>
+      <div class="d-grid mb-3">
+          <button class="btn text-white fs-5" style="background-color: #96c93e;" type="submit">Enviar</button>
+      </div>
+  </form>
+</div>
+
+
+</main>
+ <!-- seccion para el footer ------------------------------------------>
+
+ <footer class=" text-center "> 
+      <div class="row  align-items-center px-5 py-3">         
+          <div class="col gx-5">
+              <a href="#!" class=" text-white text-decoration-none">Preguntas frecuentes</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Contáctanos</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Prensa</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Conferencias</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Términos y Condiciones</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Privacidad</a>
+          </div>
+          <div class="col ">
+              <a href="#!" class="text-white text-decoration-none">Estudiantes</a>
+          </div>
+      </div>  
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
