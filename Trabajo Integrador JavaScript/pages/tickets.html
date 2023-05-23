@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Trabajo Integrador JavaScript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/Estilos.css">
+
+</head>
+<body >
+
+  <!-- Nota:
+    Organizacion luego gestion
+    
+    1- Maquetar la pagina, (Figma) siempre trabajar Mobile first a Desktop, 
+      una buena practica es colocar cada seccion del html, encapsular en un container, esto nos da flexibilidad con margenes etc
+    2- Definir componentes a utilizar, tamaños relativos , colores, formatos
+    2.1 header con menu Navbar, 
+    2.2 Utilizar card overlays para la parte de arriba
+    2.3 Card group, badge
+    2.4 Card horizontal para imagen y texto de costado, o ver si trabjo con row col
+    2.5 Formulario
+    2.6 footer con row column -->
+  
+
+
+   
+<!--  Seccion navbar -->
+<header>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
+      <div class="container-fluid mx-5">
+        <!--<a class="navbar-brand" href="#">          
+             <img src="img/codoacodo.png" alt="Logo Codo a Codo" width="20%" height="20%">Conf Bs As</a>-->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        
+
+       <div class="collapse navbar-collapse   justify-content-end " id="navbarSupportedContent">
+        
+        <!-- Nota: una alternativa para poner los items alineados a la derecha es
+         <ul class="navbar-nav mr-auto">: esto es por defecto, entonces  cambiar mr-auto por ml-auto lo manda para la derecha
+        
+        -->  
+
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active" aria-current="page" href="#">La confencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#oradores">Los oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">El lugar y la fecha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conviérte en orador</a>
+            </li>
+            <li class="nav-item  ">
+              <a class="nav-link text-success " href="#">Comprar ticket</a>
+            </li>
+          </ul>         
+        </div>
+      </div>
+    </nav>   
+</header>
+
+<main>
+<!-- Seccion card overlays debo tratar el desborde--> 
+
+
+
+<!--
+
+<div class="card  text-bg-dark text-end rounded-0 position-relative  ">
+  <img src="img/ba1.jpg" class="card-img opacity-50" alt="Imagen BS1">
+ <div class="container position-absolute bottom-0 end-0 mb-5 me-5 ">
+  <div class="row">
+    <div class="col ">        
+    <h3 class="card-title">Conf Bs As</h3>
+    <p class="card-text ">Bs As llega por primera vez a Argentina. un evento para compartir con nuestra comunidad el conocimiento y experiencia
+      de los expertos que estan creando el futuro de internet. Ven a conocer  a miembros del evento, a otros estudiantes de Codo a Codo y los oradores 
+      de primer nivel que tenemos para ti. Te esperamos!
+    </p>        
+    <button type="button" class="btn text-white border">Quiero ser orador</button>
+    <button type="button" class="btn btn-success">Comprar tickets</button>
+  </div>
+</div>
+</div>
+  
+</div> 
+
+-->
+
+
+<!--
+Nota     En el caso, poco frecuente, de que en una hoja de estilo deba referenciar URLs o vínculos a otros archivos, 
+casi siempre se trata de gráficos que se vinculan como fondo a un elemento. En ese caso hay que tener en cuenta una particularidad:
+
+En CSS las URLs siempre se definen con referencia a la hoja de estilo, no al documento vinculado a ella.
+
+La estructura de directorio propio podría ser, por ejemplo:
+
+Archivo.html
+imagenes/imagen.gif
+css/sus-hojas-de-estilo.css
+
+Por lo tanto, si quiere integrar una imagen de fondo en su página, en el archivo CSS aparecerá, por ejemplo:
+
+body {
+background-image: url (../imágenes/imagen.gif);
+/* otras declaraciones */
+}-->
+
+
+<!--     Dark variant   opacity-75  d-dm-block oculto para dispositivos medios -->
+
+
+
+    
+
+<!--  seccion para la informacion de los oradores   utilizo card-group -->
+
+
+
+
+<!-- seccion para el Form -->
+<div class="container w-50 pt-2">  
+
+  <div class="row row-cols-1 row-cols-xl-3 g-2">
+  <!--  <div class="row row-cols-1 row-cols-md-3 g-2 ">  esta opcion es para dispositivos medios 3 columnas-->
+    <div class="col">
+        <div class="card text-center  rounded-0 columnainfo1" >
+             <div class="card-body ">
+                <h4 class="card-title">Estudiante</h4>
+                <p class="card-text">Tienen un descuento</p>
+                <p class="card-text fw-bold">80%</p>
+                <h6 class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">* presentar documentación</h6>
+            </div>
+        </div>
+    </div>   
+    <div class="col">
+      <div class="card text-center  rounded-0 columnainfo2" >
+           <div class="card-body ">
+              <h4 class="card-title">Trainee</h4>
+              <p class="card-text">Tienen un descuento</p>
+              <p class="card-text fw-bold">50%</p>
+              <h6 class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">* presentar documentación</h6>
+          </div>
+      </div>
+  </div> 
+  <div class="col">
+    <div class="card text-center  rounded-0 columnainfo3" >
+         <div class="card-body ">
+            <h4 class="card-title">Junior</h4>
+            <p class="card-text">Tienen un descuento</p>
+            <p class="card-text fw-bold">15%</p>
+            <h6 class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">* presentar documentación</h6>
+        </div>
+    </div>
+</div> 
+</div>  
+<div class="text-center">
+      <p class="text-secondary m-0"><sup>VENTA</sup> <h2>VALOR DEL TICKET $200</h2> </p>
+</div>
+ 
+  <form class="row g-1 gx-5 form">
+      <div class="col-md-6 mb-3">
+          <input type="text" required class="form-control" placeholder="Nombre">
+      </div>
+      <div class="col-md-6 mb-3">
+          <input type="text" required class="form-control" placeholder="Apellido">
+      </div>
+      <div class="col-md-12 mb-3">
+        <input type="email" required class="form-control" placeholder="Correo">
+      </div>    
+      <div class="col-md-6 mb-3">
+        <label for="cantidadEntradas" class="form-label">Cantidad</label>
+        <input type="number" class="form-control" id="cantidadEntradas" min="1" value="1">        
+    </div>
+    <div class="col-md-6 mb-3">
+        <label for="tipoEntrada" class="form-label">Categoría</label>
+        <select id="tipoEntrada" class="form-select">
+            <option value="estudiante">Estudiante</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior" selected>Junior</option>
+        </select>
+      </div>
+    <div class="mb-3 mt-4">
+        <p class=" alert-primary alert" id="totalAPagar">Total a Pagar: $0,00</p>
+    </div>                    
+    <div class="d-grid gap-2 col-6"> <!--d-grid es elemento de bloque-->
+        <button class="btn  btnBorrar" type=" button">Borrar</button>
+    </div>
+    <div class="d-grid gap-2 col-6 ">
+        <button   class="btn btnResumen"   type=" button">Resumen</button>
+        <!--  <button   class="btn btnResumen"  onclick="calcularTotal()" type=" button">Resumen</button>-->
+    </div>
+  </form>
+</div>
+
+</div>
+</main>
+ <!-- seccion para el footer ------------------------------------------>
+
+ <footer class=" text-center "> 
+      <div class="row  align-items-center px-5 py-3 mt-3">         
+          <div class="col gx-5">
+              <a href="#!" class=" text-white text-decoration-none">Preguntas frecuentes</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Contáctanos</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Prensa</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Conferencias</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Términos y Condiciones</a>
+          </div>
+          <div class="col gx-5">
+              <a href="#!" class="text-white text-decoration-none">Privacidad</a>
+          </div>
+          <div class="col ">
+              <a href="#!" class="text-white text-decoration-none">Estudiantes</a>
+          </div>
+      </div>  
+</footer>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/js/scripts.js"></script>
+
+</body>
+</html>

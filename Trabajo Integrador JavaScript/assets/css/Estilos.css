@@ -1,0 +1,104 @@
+
+
+
+
+
+
+.card-container
+{
+/*  position: relative;
+  height: 100%;*/
+  margin-top: 5rem;
+  height: auto;
+}
+
+.carousel-item img1, img2, img3{ /* esto indica que buscando el primer selector se aplica a cadad uno de los que siguen*/
+   opacity: 0.5;
+}
+
+
+.columnainfo1
+{
+  border-color: #007BFF;
+}
+
+.columnainfo2
+{
+  border-color:#17A2B8;
+}
+
+.columnainfo3
+{
+  border-color:#FFC107;
+}
+
+
+
+.Btn-Verde{
+  background-color: #28A745;
+}
+
+.btnResumen, .btnBorrar{ 
+  background-color: #96c93e;
+  color: white;  
+}
+
+
+.btnResumen:hover , .btnBorrar:hover{ 
+  background-color: #83b135;
+  color: white;  
+}
+
+
+.posicion div{
+  text-align: end;
+  bottom: 5rem;
+  right: 5rem;
+ 
+} 
+
+footer {
+  /*********************************************************************/
+  /*  background-color: #1E4F6D;*/
+  /*  Gradiente para el footer*/
+
+    background: linear-gradient(90deg,#1E4F6D 0%,#1D4358 35%,#1D5271 100%);
+}
+
+
+
+/*
+En el caso, poco frecuente, de que en una hoja de estilo deba referenciar URLs o vínculos a otros archivos, casi siempre se trata de gráficos que se vinculan como fondo a un elemento. En ese caso hay que tener en cuenta una particularidad:
+
+En CSS las URLs siempre se definen con referencia a la hoja de estilo, no al documento vinculado a ella.
+
+La estructura de directorio propio podría ser, por ejemplo:
+
+Archivo.html
+imagenes/imagen.gif
+css/sus-hojas-de-estilo.css
+
+Por lo tanto, si quiere integrar una imagen de fondo en su página, en el archivo CSS aparecerá, por ejemplo:
+
+body {
+background-image: url (../imágenes/imagen.gif);
+...
+}
+
+css
+.imagen1 {
+  background-image: url(../img/ba1.jpg);
+  opacity :0.90;  
+}
+
+.imagen2 {
+  background-image: url(../img/ba2.jpg); 
+  opacity :0.90;
+}
+
+.imagen3{
+  background-image: url(../img/ba3.jpg); 
+  opacity :0.90;
+}
+
+*/
